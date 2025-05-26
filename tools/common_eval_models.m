@@ -269,13 +269,13 @@ for n_iter_mod = 1:Loop.n_iter
                 Par.lagM = Loop.mdl_list{n_iter_mod,"nb_lagM"};
                 Par.lagQ = Loop.mdl_list{n_iter_mod,"nb_lagQ"};
                 Par.lagY = Loop.mdl_list{n_iter_mod,"nb_lagY"};
-                Par.blocks = Loop.blocks; % still put blocks and r to not cause code to stop
+                Par.blocks = ones(Par.size_data_in,1); % still put blocks and r to not cause code to stop
                 Par.r = ones(size(Loop.blocks,2),1);
                 Par.Dum = Loop.Dum;
             case 'BVAR'
                 Loop.parameters(n_iter_mod,:) = Loop.mdl_list{n_iter_mod,2:6};
                 Par.bvar_lags = Loop.mdl_list{n_iter_mod,"nb_lags"};
-                Par.blocks = Loop.blocks; % still put blocks and r to not cause code to stop
+                Par.blocks = ones(Par.size_data_in,1); % still put blocks and r to not cause code to stop
                 Par.r = ones(size(Loop.blocks,2),1);
         end
 
