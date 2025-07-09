@@ -42,7 +42,7 @@ function [MAE] = common_mae(xest,Par,t_m,m,datet,do_Covid,country,MAE,do_mae,nam
 % - do_mae [scalar] = switch on how to compute the MAE
 % - nameseries [cell array] = name of the series (short version)
 %
-% OUTPUT
+% OUTPUTS
 % - MAE [structure] mean absolute errors
 %       o Bac [structure] MAE for backcasting
 %           > Pred [matrix] out-of-sample real-time predictions
@@ -246,7 +246,7 @@ elseif do_mae == 0
 
     end
 
-    disp('Section 7: Error evaluation completed, using values obtained in the 2023 review of models');
+    disp('Section 7: Error evaluation completed, using values provided by user');
 
 else
 
